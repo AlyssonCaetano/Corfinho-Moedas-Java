@@ -38,6 +38,8 @@ public class principal {
 		
 		System.out.println("Ordem reversa");
 		System.out.println(listaNomes);
+
+		
 		
 
 	}
