@@ -1,0 +1,23 @@
+package Empresa;
+
+public class Principal {
+
+		public static void main (String[] args) {
+					
+			//LivroDigital ld = new LivroDigital("Senhro aneis",new Autor("Angelo","Brasileiro","autor@email.com"),"Ficção",5,10000,3500);
+			
+			
+			//ld.info();
+			
+		
+			Livro livro = new Livro("Senhor aneis",new Autor(),"ficção",5);
+			livro.info();
+			
+			//LivroFisico lf = new LivroFisico (20,500);
+			//lf.info();
+			
+			
+		}
+		
+
+}
