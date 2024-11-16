@@ -10,22 +10,40 @@ public class Euro extends Moeda{
 	
 	@Override
 	void info() {
-		System.out.println("Valor em Euro: " );
+		System.out.println("Valor em Euro adicionado: " + valor);
 	}
 	 
 	/*coverter valores*/
 	
 	@Override
-	double converter() {
-		double cv = valor*6;
-		return cv;
+	public double converter() {
+		return valor*6;
+		
 		
 	}
 
 
 	@Override
 	public String toString() {
-		return "Euro [valor=" + valor + ", converter()=" + converter() + "]";
+		return "Euro [valor=" + valor + ", convertersão=" + converter() + "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		return true;
 	}
 	
 	

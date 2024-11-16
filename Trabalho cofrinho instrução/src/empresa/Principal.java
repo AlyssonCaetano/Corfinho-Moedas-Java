@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
-		int opcao;
+		int opcao; // Armazena a escolha do usuário
 		
 		Cofrinho cofrinho = new Cofrinho();
 				
@@ -42,14 +42,14 @@ public class Principal {
 					
 					/*VERIFICANDO A OPÇÃO DESEJADA*/
 					if (tipoMoeda == 1) {
-						moeda = new Dolar(valorAdicionar);						
+						moeda = new Dolar(valorAdicionar);	
 					}	
 					if (tipoMoeda == 2) {
-						moeda = new Real(valorAdicionar);		
+						moeda = new Real(valorAdicionar);			
 					}
 					
 					if (tipoMoeda == 3) {
-						moeda = new Euro(valorAdicionar);					
+						moeda = new Euro(valorAdicionar);	
 					}				
 					
 					cofrinho.adicionar(moeda);
@@ -59,8 +59,12 @@ public class Principal {
 				} else if (opcao == 2) {
 					/*REMOVER MOEDA*/
 					
+					/*MOSTRANDO OS VALORES DISPONÍVEIS PARA REMOVER DA LISTA*/
+					cofrinho.listagemMoeda();
+					
 					int tipoMoeda = 0;
 					while (tipoMoeda >3 || tipoMoeda < 1) {
+						System.out.println("****Escolha qual moeda da lista deseja remover****");
 						System.out.println("----------TIPO DE MOEDA----------");
 						System.out.println("1-Dolar ");
 						System.out.println("2-Real ");
@@ -68,11 +72,8 @@ public class Principal {
 						tipoMoeda = teclado.nextInt();
 					}
 					
-					System.out.println("Qual o valor a ser REMOVIDO? : ");
-					
-					/*MOSTRANDO OS VALORES DISPONÍVEIS PARA REMOVER DA LISTA*/
-					cofrinho.listagemMoeda();
-					
+					System.out.println("****Qual o valor DA LISTA a ser REMOVIDO? : ****");
+									
 					double valorRemover = teclado.nextInt();	
 					Moeda moeda = null;
 					
@@ -89,6 +90,8 @@ public class Principal {
 					}				
 					
 					cofrinho.remover(moeda);
+					System.out.println("Moeda removida ....");
+					
 					
 					
 				} else if (opcao == 3) {
@@ -96,11 +99,19 @@ public class Principal {
 					System.out.println();
 					
 					cofrinho.listagemMoeda();
+			
+					
 					
 				} else if (opcao == 4) {
 					/*CALCULAR TOTAL COVERTIDO PARA REAL*/
+										
+					cofrinho.totalConvertido();
+					
+					
 					
 				}
+					
+					
 				
 			System.out.println("----------COFRINHO----------");
 			System.out.println("1-Adicionar ");
@@ -111,6 +122,8 @@ public class Principal {
 			System.out.println("Escolha uma opção (0-4): ");
 			opcao = teclado.nextInt();
 			}
+				
+		
 		System.out.println("Encerrando o programa ...");
 		
 		

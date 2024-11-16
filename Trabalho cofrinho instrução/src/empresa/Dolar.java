@@ -10,15 +10,19 @@ public class Dolar extends Moeda {
 
 	@Override
 	void info() {
-		System.out.println("Valor em dolar: " + valor);
+		
+		System.out.println("Valor em dolar adicionado: " + valor);
+			
+		
 	}
 	 
 	/*coverter valores*/
 	
 	@Override
-	double converter() {
-		double cv = valor*5.7;
-		return cv;
+	public double converter() {
+		//taxa de conversão de dolar para real
+		
+		return 5.7*valor;
 		
 	}
 
@@ -26,6 +30,28 @@ public class Dolar extends Moeda {
 	public String toString() {
 		return "Dolar [valor=" + valor + ", conversão =" + converter() + "]";
 	}
+	
+	
+	/*Fazer comparação com metodo hash*/
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		return true;
+	}
+	
+
+	
+	
 	
 	
 	
