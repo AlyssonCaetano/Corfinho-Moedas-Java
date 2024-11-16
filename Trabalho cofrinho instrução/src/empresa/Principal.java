@@ -23,7 +23,7 @@ public class Principal {
 		while (opcao!=0) {
 				/*VALIDANDO A OPÇÃO DE ENTRADA DO MENU*/
 				if (opcao < 0 || opcao > 4  ) {
-					System.out.println("*******Insira uma opção válida: ******** ");
+					System.out.println("*******Insira uma opção válida: ********");
 					
 				} else if (opcao == 1) {
 					/*ADICIONAR MOEDA E ESCOLHER QUAL O TIPO*/
@@ -92,26 +92,18 @@ public class Principal {
 					cofrinho.remover(moeda);
 					System.out.println("Moeda removida ....");
 					
-					
-					
 				} else if (opcao == 3) {
 					System.out.println("Listando moedas....");
 					System.out.println();
 					
 					cofrinho.listagemMoeda();
 			
-					
-					
 				} else if (opcao == 4) {
 					/*CALCULAR TOTAL COVERTIDO PARA REAL*/
 										
 					cofrinho.totalConvertido();
 					
-					
-					
 				}
-					
-					
 				
 			System.out.println("----------COFRINHO----------");
 			System.out.println("1-Adicionar ");
