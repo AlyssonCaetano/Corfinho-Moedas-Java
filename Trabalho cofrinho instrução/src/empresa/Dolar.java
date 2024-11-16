@@ -10,16 +10,24 @@ public class Dolar extends Moeda {
 
 	@Override
 	void info() {
-		System.out.println("Valor em dolar");
+		System.out.println("Valor em dolar: " + valor);
 	}
 	 
 	/*coverter valores*/
+	
 	@Override
 	double converter() {
 		double cv = valor*5.7;
 		return cv;
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Dolar [valor=" + valor + ", conversão =" + converter() + "]";
+	}
+	
+	
 	
 	
 	

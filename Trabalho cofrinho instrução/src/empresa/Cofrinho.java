@@ -8,8 +8,7 @@ public class Cofrinho {
 	private ArrayList<Moeda> listaMoeda = new ArrayList<Moeda>();
 	
 	/**/
-	
-	
+		
 	
 	/*COM O CONCEITO DE POLIMORFISMO , PODEMOS ADICIONAR DIFERENTES CLASSES FILHAS*/
 
@@ -28,7 +27,8 @@ public class Cofrinho {
 		}
 	
 	public void totalConvertido() {
-		
+			
+			
 		}
 
 	
