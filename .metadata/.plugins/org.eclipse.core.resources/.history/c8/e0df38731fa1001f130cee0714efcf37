@@ -1,7 +1,0 @@
-package empresa;
-
-public interface Imprimivel implements Imprimivel {
-	
-	void imprimir();
-	
-}
